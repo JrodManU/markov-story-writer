@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container-fluid
+    div.jumbotron
+      h1 #{title}
+      p Hello, and welcome! To rewrite your story in a completely nonsense way just paste your text in the area below and press write!
+
+    script(src='/javascripts/generator.js')
+    div.well
+      div.form-group
+        label Original Story:
+        textarea(rows="5")#originalStory.form-control
+        button#writeStory.btn.btn-default.btn-block Write
+      label#generatedHeader
+      p#generatedStory
