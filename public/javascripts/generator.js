@@ -15,7 +15,7 @@ $(document).ready(function() {
     var map = {};
     var count = 0;
 
-    for(var i = 0; i < words.length; i++) {
+    for(var i = 0; i < words.length - 1; i++) {
       if(!map[words[i] + " " + words[i + 1]]) {
         count++;
         map[words[i] + " " + words[i + 1]] = new Array();
